@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+typedef struct G_Node
+{
+	char Node;//储存结点
+	struct G_Node *next;
+}Node;
+
+int main()
+{
+	G_Node *G[10] = { 0 }, *C;
+	G[10] = (Node)malloc(sizeof(G_Node));
+	int m, n;
+	char a, b;
+	for (m = 0; m < 10; m++)
+		G[m]->Node = m + 97;
+	while (1)
+	{
+		printf("请输入相关的两结点,结束为0");
+		scanf("%c", &a);
+		if (a == '0')
+			break;
+		getchar();
+		scanf("%c", &b);
+		getchar();
+		C = G['a' - 97];
+		while (C->next)
+			C = C->next;
+	}
+}
